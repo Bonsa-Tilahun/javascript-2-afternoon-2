@@ -370,7 +370,7 @@ devMountainEmployees.splice(devMountainEmployees.indexOf(cahlan), 1)
 */
 
 //Code Here
-let users = {}
+let users = []
 
 
 /*
@@ -393,26 +393,26 @@ var user1 = {
 //Code Here
 var user2 = {
     name: 'jake McIver',
-    email: 'mark.mciver@devmounta.in',
+    email: 'jake.mciver@devmounta.in',
     password: 'hunter2',
     username: 'ihazcode'
 };
 var user3 = {
-    name: 'Mark McIver',
-    email: 'mark.mciver@devmounta.in',
+    name: 'luck McIver',
+    email: 'luck.mciver@devmounta.in',
     password: 'hunter2',
     username: 'ihazcode'
 };
 var user4 = {
-    name: 'Mark McIver',
-    email: 'mark.mciver@devmounta.in',
+    name: 'joe McIver',
+    email: 'joe.mciver@devmounta.in',
     password: 'hunter2',
     username: 'ihazcode'
 };
-users.user1 = user1
-users.user2 = user2
-users.user3 = user3
-users.user4 = user4
+users.push(user1)
+users.push(user2)
+users.push(user3)
+users.push(user4)
 console.log(users)
 
 
@@ -428,7 +428,11 @@ console.log(users)
 
 //Code Here
 
-
+for (let i = 0; i < users.length; i++) {
+    if (users[i].email === 'mark.mciver@devmounta.in') {
+        users.splice(i, 1)
+    }
+}
 
 /*
   The activity we just did is very much how data works in 'the real world'.
